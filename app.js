@@ -1,5 +1,9 @@
-var play = document.getElementById("play_button");
-var start = document.querySelector(".start");
+const play = document.getElementById("play_button");
+const start = document.querySelector(".start");
+const introText = document.querySelector(".intro");
+const board = document.querySelector(".container");
+const playerScore = document.querySelector(".player-score");
+const robotScore = document.querySelector(".robot-score");
 var hover = false;
 
 var interval = window.setInterval(function(){
@@ -27,8 +31,13 @@ play.onmouseout = function() {
     hover = false;
 }
 
-play.addEventListener('click', (event) => {
-    play.style.visibility = hidden;
-    start.style.visibility = hidden;
+play.addEventListener('click', () => {
+    play.style.visibility = 'hidden';
+    start.classList.toggle("active");
+    introText.classList.toggle("active");
+    board.classList.toggle("active");
+    robotScore.classList.toggle("active");
+    playerScore.classList.toggle("active");
+    setTimeout(() => start.remove(), 1000);
 });
 
