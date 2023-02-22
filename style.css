@@ -130,6 +130,15 @@
 .robot-score.active {
     right: 20%;
     transition: 2s;
+
+}
+
+.O {
+    visibility: hidden;
+}
+
+.X {
+    visibility: hidden;
 }
 
 @media(max-width: 1000px) {
