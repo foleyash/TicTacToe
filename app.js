@@ -28,6 +28,8 @@ var cell7_clicked = false;
 var cell8_clicked = false;
 var cell9_clicked = false;
 
+const moves = ["-", "-","-","-","-","-","-","-","-"];
+
 var interval = window.setInterval(function(){
     if(hover == true) {
         return;
@@ -76,11 +78,13 @@ cell1.addEventListener('click', () => {
         img.src = 'img/X.jpg';
         img.alt = 'X';
         X_turn = false;
+        moves[0] = "X";
     }   
     else {
         img.src = 'img/O.jpg';
         img.alt = 'O';
         X_turn = true;
+        moves[0] = "O";
     }
 
     cell1.appendChild(img); 
@@ -99,11 +103,13 @@ cell2.addEventListener('click', () => {
         img.src = 'img/X.jpg';
         img.alt = 'X';
         X_turn = false;
+        moves[1] = "X";
     }   
     else {
         img.src = 'img/O.jpg';
         img.alt = 'O';
         X_turn = true;
+        moves[1] = "O";
     }
 
     cell2.appendChild(img); 
@@ -122,11 +128,13 @@ cell3.addEventListener('click', () => {
         img.src = 'img/X.jpg';
         img.alt = 'X';
         X_turn = false;
+        moves[2] = "X";
     }   
     else {
         img.src = 'img/O.jpg';
         img.alt = 'O';
         X_turn = true;
+        moves[2] = "O";
     }
 
     cell3.appendChild(img); 
@@ -145,11 +153,13 @@ cell4.addEventListener('click', () => {
         img.src = 'img/X.jpg';
         img.alt = 'X';
         X_turn = false;
+        moves[3] = "X";
     }   
     else {
         img.src = 'img/O.jpg';
         img.alt = 'O';
         X_turn = true;
+        moves[3] = "O";
     }
 
     cell4.appendChild(img); 
@@ -168,11 +178,13 @@ cell5.addEventListener('click', () => {
         img.src = 'img/X.jpg';
         img.alt = 'X';
         X_turn = false;
+        moves[4] = "X";
     }   
     else {
         img.src = 'img/O.jpg';
         img.alt = 'O';
         X_turn = true;
+        moves[4] = "O";
     }
 
     cell5.appendChild(img); 
@@ -191,11 +203,13 @@ cell6.addEventListener('click', () => {
         img.src = 'img/X.jpg';
         img.alt = 'X';
         X_turn = false;
+        moves[5] = "X";
     }   
     else {
         img.src = 'img/O.jpg';
         img.alt = 'O';
         X_turn = true;
+        moves[5] = "O";
     }
 
     cell6.appendChild(img); 
@@ -214,11 +228,13 @@ cell7.addEventListener('click', () => {
         img.src = 'img/X.jpg';
         img.alt = 'X';
         X_turn = false;
+        moves[6] = "X";
     }   
     else {
         img.src = 'img/O.jpg';
         img.alt = 'O';
         X_turn = true;
+        moves[6] = "O";
     }
 
     cell7.appendChild(img); 
@@ -237,11 +253,13 @@ cell8.addEventListener('click', () => {
         img.src = 'img/X.jpg';
         img.alt = 'X';
         X_turn = false;
+        moves[7] = "X";
     }   
     else {
         img.src = 'img/O.jpg';
         img.alt = 'O';
         X_turn = true;
+        moves[7] = "O";
     }
 
     cell8.appendChild(img); 
@@ -260,13 +278,46 @@ cell9.addEventListener('click', () => {
         img.src = 'img/X.jpg';
         img.alt = 'X';
         X_turn = false;
+        moves[8] = "X";
     }   
     else {
         img.src = 'img/O.jpg';
         img.alt = 'O';
         X_turn = true;
+        moves[8] = "O";
     }
 
     cell9.appendChild(img); 
     cell9_clicked = true;
+    
+    if(evaluateXWin()) {
+        //Do something here
+    }
 });
+
+function evaluateXWin() {
+    if(moves[0] == "X" && moves[1] == "X" && moves[2] == "X") return true;
+    else if(moves[0] == "X" && moves[4] == "X" && moves[8] == "X") return true;
+    else if(moves[0] == "X" && moves[3] == "X" && moves[6] == "X") return true;
+    else if(moves[1] == "X" && moves[4] == "X" && moves[7] == "X") return true;
+    else if(moves[2] == "X" && moves[5] == "X" && moves[8] == "X") return true;
+    else if(moves[3] == "X" && moves[4] == "X" && moves[5] == "X") return true;
+    else if(moves[6] == "X" && moves[7] == "X" && moves[8] == "X") return true;
+    else if(moves[6] == "X" && moves[4] == "X" && moves[2] == "X") return true;
+
+    return false;
+}
+
+function evaluateOWin() {
+
+    if(moves[0] == "O" && moves[1] == "O" && moves[2] == "O") return true;
+    else if(moves[0] == "O" && moves[4] == "O" && moves[8] == "O") return true;
+    else if(moves[0] == "O" && moves[3] == "O" && moves[6] == "O") return true;
+    else if(moves[1] == "O" && moves[4] == "O" && moves[7] == "O") return true;
+    else if(moves[2] == "O" && moves[5] == "O" && moves[8] == "O") return true;
+    else if(moves[3] == "O" && moves[4] == "O" && moves[5] == "O") return true;
+    else if(moves[6] == "O" && moves[7] == "O" && moves[8] == "O") return true;
+    else if(moves[6] == "O" && moves[4] == "O" && moves[2] == "O") return true;
+
+    return false;
+}
