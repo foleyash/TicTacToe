@@ -51,7 +51,7 @@ play.onmouseover = function() {
 };
 
 play.onmouseout = function() {
-    play.style.color = 'blue';
+    play.style.color = 'rgb(101, 241, 101)';
     play.style.scale = 1;
     hover = false;
 }
@@ -375,20 +375,155 @@ function evaluateXWin() {
 
 function evaluateOWin() {
 
-    if(moves[0] == "O" && moves[1] == "O" && moves[2] == "O") return true;
-    else if(moves[0] == "O" && moves[4] == "O" && moves[8] == "O") return true;
-    else if(moves[0] == "O" && moves[3] == "O" && moves[6] == "O") return true;
-    else if(moves[1] == "O" && moves[4] == "O" && moves[7] == "O") return true;
-    else if(moves[2] == "O" && moves[5] == "O" && moves[8] == "O") return true;
-    else if(moves[3] == "O" && moves[4] == "O" && moves[5] == "O") return true;
-    else if(moves[6] == "O" && moves[7] == "O" && moves[8] == "O") return true;
-    else if(moves[6] == "O" && moves[4] == "O" && moves[2] == "O") return true;
+    if(moves[0] == "O" && moves[1] == "O" && moves[2] == "O") {
+        cell1.style.background = "red";
+        cell1.removeChild(cell1.firstChild);
+        setTimeout(() => {
+            cell2.removeChild(cell2.firstChild);
+            cell2.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell3.removeChild(cell3.firstChild);
+            cell3.style.background = 'red';
+        }, 340);
+        gameFinished(false);
+        return true;
+    }
+    else if(moves[0] == "O" && moves[4] == "O" && moves[8] == "O") {
+        cell1.style.background = "red";
+        cell1.removeChild(cell1.firstChild);
+        setTimeout(() => {
+            cell5.removeChild(cell5.firstChild);
+            cell5.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell9.removeChild(cell9.firstChild);
+            cell9.style.background = 'red';
+        }, 340);
+        gameFinished(false);
+        return true;
+    }
+    else if(moves[0] == "O" && moves[3] == "O" && moves[6] == "O") {
+        cell1.style.background = "red";
+        cell1.removeChild(cell1.firstChild);
+        setTimeout(() => {
+            cell4.removeChild(cell4.firstChild);
+            cell4.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell7.removeChild(cell7.firstChild);
+            cell7.style.background = 'red';
+        }, 340);
+        gameFinished(false);
+        return true;
+    }
+    else if(moves[1] == "O" && moves[4] == "O" && moves[7] == "O") {
+        cell2.style.background = "red";
+        cell2.removeChild(cell2.firstChild);
+        setTimeout(() => {
+            cell5.removeChild(cell5.firstChild);
+            cell5.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell8.removeChild(cell8.firstChild);
+            cell8.style.background = 'red';
+        }, 340);
+        gameFinished(false);
+        return true;
+    }
+    else if(moves[2] == "O" && moves[5] == "O" && moves[8] == "O") {
+        cell3.style.background = "red";
+        cell3.removeChild(cell3.firstChild);
+        setTimeout(() => {
+            cell6.removeChild(cell6.firstChild);
+            cell6.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell9.removeChild(cell9.firstChild);
+            cell9.style.background = 'red';
+        }, 340);
+        gameFinished(false);
+        return true;
+    }
+    else if(moves[3] == "O" && moves[4] == "O" && moves[5] == "O") {
+        cell4.style.background = "red";
+        cell4.removeChild(cell4.firstChild);
+        setTimeout(() => {
+            cell5.removeChild(cell5.firstChild);
+            cell5.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell6.removeChild(cell6.firstChild);
+            cell6.style.background = 'red';
+        }, 340);
+        gameFinished(false);
+        return true;
+    }
+    else if(moves[6] == "O" && moves[7] == "O" && moves[8] == "O") {
+        cell7.style.background = "red";
+        cell7.removeChild(cell7.firstChild);
+        setTimeout(() => {
+            cell8.removeChild(cell8.firstChild);
+            cell8.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell9.removeChild(cell9.firstChild);
+            cell9.style.background = 'red';
+        }, 340);
+        gameFinished(false);
+        return true;
+    }
+    else if(moves[6] == "O" && moves[4] == "O" && moves[2] == "O") {
+        cell7.style.background = "red";
+        cell7.removeChild(cell7.firstChild);
+        setTimeout(() => {
+            cell5.removeChild(cell5.firstChild);
+            cell5.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell3.removeChild(cell3.firstChild);
+            cell3.style.background = 'red';
+        }, 340);
+        gameFinished(false);
+        return true;
+    }
 
     return false;
 }
 
+function findLosingSpaces(winningSpaces) {
+    
+    var losingSpaces = [];
+    for(let i = 0; i < 9; i++) {
+        let winningSpace = false;
+        for(let j = 0; j < 3; j++) {
+            if(winningSpaces[j] == i) {
+                winningSpace = true;
+            }
+        }
+
+        if(winningSpace) {
+            continue;
+        }
+        else {
+            losingSpaces.push(i);
+        }
+    }
+
+    return losingSpaces;
+}
+
+function alternateLights(losingSpaces) {
+    for(let i = 0; i < 6; i++) {
+
+    }
+}
+
 function gameFinished(X_wins) {
     if(X_wins) {
-        
+        //Say X wins!
+    }
+    else {
+        //Say O wins!
     }
 }
