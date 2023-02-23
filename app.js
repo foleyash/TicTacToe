@@ -17,6 +17,7 @@ const cell9 = document.getElementById("cell9");
 
 var hover = false;
 var X_turn = true;
+var gameOver = false;
 
 var cell1_clicked = false;
 var cell2_clicked = false;
@@ -66,9 +67,13 @@ play.addEventListener('click', () => {
 });
 
 
+
 cell1.addEventListener('click', () => {
     
-    if(cell1_clicked) return;
+    if(cell1_clicked || gameOver) {
+        console.log('Game is over');
+        return;
+    } 
 
     var img = document.createElement("img");
     img.style.maxWidth = '100%';
@@ -89,11 +94,18 @@ cell1.addEventListener('click', () => {
 
     cell1.appendChild(img); 
     cell1_clicked = true;
+
+    if(evaluateXWin()) {
+        gameOver = true;
+    }
+    else if(evaluateOWin()) {
+        gameOver = true;
+    }
 });
 
 cell2.addEventListener('click', () => {
     
-    if(cell2_clicked) return;
+    if(cell2_clicked || gameOver) return;
     
     var img = document.createElement("img");
     img.style.maxWidth = '100%';
@@ -114,11 +126,18 @@ cell2.addEventListener('click', () => {
 
     cell2.appendChild(img); 
     cell2_clicked = true;
+
+    if(evaluateXWin()) {
+        gameOver = true;
+    }
+    else if(evaluateOWin()) {
+        gameOver = true;
+    }
 });
 
 cell3.addEventListener('click', () => {
     
-    if(cell3_clicked) return;
+    if(cell3_clicked || gameOver) return;
     
     var img = document.createElement("img");
     img.style.maxWidth = '100%';
@@ -139,11 +158,18 @@ cell3.addEventListener('click', () => {
 
     cell3.appendChild(img); 
     cell3_clicked = true;
+
+    if(evaluateXWin()) {
+        gameOver = true;
+    }
+    else if(evaluateOWin()) {
+        gameOver = true;
+    }
 });
 
 cell4.addEventListener('click', () => {
     
-    if(cell4_clicked) return;
+    if(cell4_clicked || gameOver) return;
     
     var img = document.createElement("img");
     img.style.maxWidth = '100%';
@@ -164,11 +190,18 @@ cell4.addEventListener('click', () => {
 
     cell4.appendChild(img); 
     cell4_clicked = true;
+
+    if(evaluateXWin()) {
+        gameOver = true;
+    }
+    else if(evaluateOWin()) {
+        gameOver = true;
+    }
 });
 
 cell5.addEventListener('click', () => {
     
-    if(cell5_clicked) return;
+    if(cell5_clicked || gameOver) return;
     
     var img = document.createElement("img");
     img.style.maxWidth = '100%';
@@ -189,11 +222,18 @@ cell5.addEventListener('click', () => {
 
     cell5.appendChild(img); 
     cell5_clicked = true;
+
+    if(evaluateXWin()) {
+        gameOver = true;
+    }
+    else if(evaluateOWin()) {
+        gameOver = true;
+    }
 });
 
 cell6.addEventListener('click', () => {
     
-    if(cell6_clicked) return;
+    if(cell6_clicked || gameOver) return;
     
     var img = document.createElement("img");
     img.style.maxWidth = '100%';
@@ -214,11 +254,18 @@ cell6.addEventListener('click', () => {
 
     cell6.appendChild(img); 
     cell6_clicked = true;
+
+    if(evaluateXWin()) {
+        gameOver = true;
+    }
+    else if(evaluateOWin()) {
+        gameOver = true;
+    }
 });
 
 cell7.addEventListener('click', () => {
     
-    if(cell7_clicked) return;
+    if(cell7_clicked || gameOver) return;
     
     var img = document.createElement("img");
     img.style.maxWidth = '100%';
@@ -239,11 +286,18 @@ cell7.addEventListener('click', () => {
 
     cell7.appendChild(img); 
     cell7_clicked = true;
+
+    if(evaluateXWin()) {
+        gameOver = true;
+    }
+    else if(evaluateOWin()) {
+        gameOver = true;
+    }
 });
 
 cell8.addEventListener('click', () => {
     
-    if(cell8_clicked) return;
+    if(cell8_clicked || gameOver) return;
     
     var img = document.createElement("img");
     img.style.maxWidth = '100%';
@@ -264,11 +318,18 @@ cell8.addEventListener('click', () => {
 
     cell8.appendChild(img); 
     cell8_clicked = true;
+
+    if(evaluateXWin()) {
+        gameOver = true;
+    }
+    else if(evaluateOWin()) {
+        gameOver = true;
+    }
 });
 
 cell9.addEventListener('click', () => {
     
-    if(cell9_clicked) return;
+    if(cell9_clicked || gameOver) return;
     
     var img = document.createElement("img");
     img.style.maxWidth = '100%';
@@ -291,9 +352,13 @@ cell9.addEventListener('click', () => {
     cell9_clicked = true;
     
     if(evaluateXWin()) {
-        //Do something here
+        gameOver = true;
+    }
+    else if(evaluateOWin()) {
+        gameOver = true;
     }
 });
+
 
 function evaluateXWin() {
     if(moves[0] == "X" && moves[1] == "X" && moves[2] == "X") return true;
@@ -320,4 +385,10 @@ function evaluateOWin() {
     else if(moves[6] == "O" && moves[4] == "O" && moves[2] == "O") return true;
 
     return false;
+}
+
+function gameFinished(X_wins) {
+    if(X_wins) {
+        
+    }
 }
