@@ -484,6 +484,9 @@ function evaluateOWin() {
             cell3.removeChild(cell3.firstChild);
             cell3.style.background = 'red';
         }, 340);
+        let winningSpaces = [6, 4, 2];
+        let losingSpaces = findLosingSpaces(winningSpaces);
+        alternateLights(losingSpaces);
         gameFinished(false);
         return true;
     }
@@ -493,7 +496,7 @@ function evaluateOWin() {
 
 function findLosingSpaces(winningSpaces) {
     
-    var losingSpaces = [];
+    let losingSpaces = [];
     for(let i = 0; i < 9; i++) {
         let winningSpace = false;
         for(let j = 0; j < 3; j++) {
@@ -514,12 +517,86 @@ function findLosingSpaces(winningSpaces) {
 }
 
 function alternateLights(losingSpaces) {
-    for(let i = 0; i < 6; i++) {
+    let color = 'blue';
 
+    interval = window.setInterval(function() {
+        if(color == 'blue') {
+            color = 'green';
+            for(let i = 0; i < 6; i++) {
+                if(losingSpaces[i] + 1 == 1) {
+                    cell1.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 2) {
+                    cell2.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 3) {
+                    cell3.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 4) {
+                    cell4.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 5) {
+                    cell5.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 6) {
+                    cell6.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 7) {
+                    cell7.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 8) {
+                    cell8.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 9) {
+                    cell9.style.background = color;
+                }
+            }
+        }
+        else{
+            color = 'blue';
+            for(let i = 0; i < 6; i++) {
+                if(losingSpaces[i] + 1 == 1) {
+                    cell1.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 2) {
+                    cell2.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 3) {
+                    cell3.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 4) {
+                    cell4.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 5) {
+                    cell5.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 6) {
+                    cell6.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 7) {
+                    cell7.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 8) {
+                    cell8.style.background = color;
+                }
+                else if(losingSpaces[i] + 1 == 9) {
+                    cell9.style.background = color;
+                }
+        }
     }
+    }, 500);
 }
 
 function gameFinished(X_wins) {
+    cell1.removeChild(cell1.firstChild);
+    cell2.removeChild(cell2.firstChild);
+    cell3.removeChild(cell3.firstChild);
+    cell4.removeChild(cell4.firstChild);
+    cell5.removeChild(cell5.firstChild);
+    cell6.removeChild(cell6.firstChild);
+    cell7.removeChild(cell7.firstChild);
+    cell8.removeChild(cell8.firstChild);
+    cell9.removeChild(cell9.firstChild);
     if(X_wins) {
         //Say X wins!
     }
