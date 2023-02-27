@@ -361,14 +361,151 @@ cell9.addEventListener('click', () => {
 
 
 function evaluateXWin() {
-    if(moves[0] == "X" && moves[1] == "X" && moves[2] == "X") return true;
-    else if(moves[0] == "X" && moves[4] == "X" && moves[8] == "X") return true;
-    else if(moves[0] == "X" && moves[3] == "X" && moves[6] == "X") return true;
-    else if(moves[1] == "X" && moves[4] == "X" && moves[7] == "X") return true;
-    else if(moves[2] == "X" && moves[5] == "X" && moves[8] == "X") return true;
-    else if(moves[3] == "X" && moves[4] == "X" && moves[5] == "X") return true;
-    else if(moves[6] == "X" && moves[7] == "X" && moves[8] == "X") return true;
-    else if(moves[6] == "X" && moves[4] == "X" && moves[2] == "X") return true;
+
+    if(moves[0] == "X" && moves[1] == "X" && moves[2] == "X") {
+        cell1.style.background = "red";
+        cell1.removeChild(cell1.firstChild);
+        setTimeout(() => {
+            cell2.removeChild(cell2.firstChild);
+            cell2.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell3.removeChild(cell3.firstChild);
+            cell3.style.background = 'red';
+            let winningSpaces = [0, 1, 2];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(true);
+        }, 340);
+      
+        return true;
+    }
+    else if(moves[0] == "X" && moves[4] == "X" && moves[8] == "X") {
+        cell1.style.background = "red";
+        cell1.removeChild(cell1.firstChild);
+        setTimeout(() => {
+            cell5.removeChild(cell5.firstChild);
+            cell5.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell9.removeChild(cell9.firstChild);
+            cell9.style.background = 'red';
+            let winningSpaces = [0, 4, 8];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(true);
+        }, 340);
+       
+        return true;
+    }
+    else if(moves[0] == "X" && moves[3] == "X" && moves[6] == "X") {
+        cell1.style.background = "red";
+        cell1.removeChild(cell1.firstChild);
+        setTimeout(() => {
+            cell4.removeChild(cell4.firstChild);
+            cell4.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell7.removeChild(cell7.firstChild);
+            cell7.style.background = 'red';
+            let winningSpaces = [0, 3, 6];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(true);
+        }, 340);
+       
+        return true;
+    }
+    else if(moves[1] == "X" && moves[4] == "X" && moves[7] == "X") {
+        cell2.style.background = "red";
+        cell2.removeChild(cell2.firstChild);
+        setTimeout(() => {
+            cell5.removeChild(cell5.firstChild);
+            cell5.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell8.removeChild(cell8.firstChild);
+            cell8.style.background = 'red';
+            let winningSpaces = [1, 4, 7];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(true);
+        }, 340);
+      
+        return true;
+    }
+    else if(moves[2] == "X" && moves[5] == "X" && moves[8] == "X") {
+        cell3.style.background = "red";
+        cell3.removeChild(cell3.firstChild);
+        setTimeout(() => {
+            cell6.removeChild(cell6.firstChild);
+            cell6.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell9.removeChild(cell9.firstChild);
+            cell9.style.background = 'red';
+            let winningSpaces = [2, 5, 8];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(true);
+        }, 340);
+       
+        return true;
+    }
+    else if(moves[3] == "X" && moves[4] == "X" && moves[5] == "X") {
+        cell4.style.background = "red";
+        cell4.removeChild(cell4.firstChild);
+        setTimeout(() => {
+            cell5.removeChild(cell5.firstChild);
+            cell5.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell6.removeChild(cell6.firstChild);
+            cell6.style.background = 'red';
+            let winningSpaces = [3, 4, 5];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(true);
+        }, 340);
+        
+        return true;
+    }
+    else if(moves[6] == "X" && moves[7] == "X" && moves[8] == "X") {
+        cell7.style.background = "red";
+        cell7.removeChild(cell7.firstChild);
+        setTimeout(() => {
+            cell8.removeChild(cell8.firstChild);
+            cell8.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell9.removeChild(cell9.firstChild);
+            cell9.style.background = 'red';
+            let winningSpaces = [6, 7, 8];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(true);
+        }, 340);
+        
+        return true;
+    }
+    else if(moves[6] == "X" && moves[4] == "X" && moves[2] == "X") {
+        cell7.style.background = "red";
+        cell7.removeChild(cell7.firstChild);
+        setTimeout(() => {
+            cell5.removeChild(cell5.firstChild);
+            cell5.style.background = 'red';
+        }, 170);
+        setTimeout(() => {
+            cell3.removeChild(cell3.firstChild);
+            cell3.style.background = 'red';
+            let winningSpaces = [6, 4, 2];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(true);
+        }, 340);
+        
+        return true;
+    }
 
     return false;
 }
@@ -385,8 +522,12 @@ function evaluateOWin() {
         setTimeout(() => {
             cell3.removeChild(cell3.firstChild);
             cell3.style.background = 'red';
+            let winningSpaces = [0, 1, 2];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(false);
         }, 340);
-        gameFinished(false);
+      
         return true;
     }
     else if(moves[0] == "O" && moves[4] == "O" && moves[8] == "O") {
@@ -399,8 +540,12 @@ function evaluateOWin() {
         setTimeout(() => {
             cell9.removeChild(cell9.firstChild);
             cell9.style.background = 'red';
+            let winningSpaces = [0, 4, 8];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(false);
         }, 340);
-        gameFinished(false);
+       
         return true;
     }
     else if(moves[0] == "O" && moves[3] == "O" && moves[6] == "O") {
@@ -413,8 +558,12 @@ function evaluateOWin() {
         setTimeout(() => {
             cell7.removeChild(cell7.firstChild);
             cell7.style.background = 'red';
+            let winningSpaces = [0, 3, 6];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(false);
         }, 340);
-        gameFinished(false);
+       
         return true;
     }
     else if(moves[1] == "O" && moves[4] == "O" && moves[7] == "O") {
@@ -427,8 +576,12 @@ function evaluateOWin() {
         setTimeout(() => {
             cell8.removeChild(cell8.firstChild);
             cell8.style.background = 'red';
+            let winningSpaces = [1, 4, 7];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(false);
         }, 340);
-        gameFinished(false);
+      
         return true;
     }
     else if(moves[2] == "O" && moves[5] == "O" && moves[8] == "O") {
@@ -441,8 +594,12 @@ function evaluateOWin() {
         setTimeout(() => {
             cell9.removeChild(cell9.firstChild);
             cell9.style.background = 'red';
+            let winningSpaces = [2, 5, 8];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(false);
         }, 340);
-        gameFinished(false);
+       
         return true;
     }
     else if(moves[3] == "O" && moves[4] == "O" && moves[5] == "O") {
@@ -455,8 +612,12 @@ function evaluateOWin() {
         setTimeout(() => {
             cell6.removeChild(cell6.firstChild);
             cell6.style.background = 'red';
+            let winningSpaces = [3, 4, 5];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(false);
         }, 340);
-        gameFinished(false);
+        
         return true;
     }
     else if(moves[6] == "O" && moves[7] == "O" && moves[8] == "O") {
@@ -469,8 +630,12 @@ function evaluateOWin() {
         setTimeout(() => {
             cell9.removeChild(cell9.firstChild);
             cell9.style.background = 'red';
+            let winningSpaces = [6, 7, 8];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(false);
         }, 340);
-        gameFinished(false);
+        
         return true;
     }
     else if(moves[6] == "O" && moves[4] == "O" && moves[2] == "O") {
@@ -483,15 +648,27 @@ function evaluateOWin() {
         setTimeout(() => {
             cell3.removeChild(cell3.firstChild);
             cell3.style.background = 'red';
+            let winningSpaces = [6, 4, 2];
+            let losingSpaces = findLosingSpaces(winningSpaces);
+            alternateLights(losingSpaces);
+            gameFinished(false);
         }, 340);
-        let winningSpaces = [6, 4, 2];
-        let losingSpaces = findLosingSpaces(winningSpaces);
-        alternateLights(losingSpaces);
-        gameFinished(false);
+        
         return true;
     }
 
     return false;
+}
+
+function evaluateTie() {
+    let full = true;
+    for(let i = 0; i < 9; i++) {
+        if(moves[i] == "-") {
+            full = false;
+        }
+    }
+
+    return full;
 }
 
 function findLosingSpaces(winningSpaces) {
@@ -588,17 +765,51 @@ function alternateLights(losingSpaces) {
 }
 
 function gameFinished(X_wins) {
-    cell1.removeChild(cell1.firstChild);
-    cell2.removeChild(cell2.firstChild);
-    cell3.removeChild(cell3.firstChild);
-    cell4.removeChild(cell4.firstChild);
-    cell5.removeChild(cell5.firstChild);
-    cell6.removeChild(cell6.firstChild);
-    cell7.removeChild(cell7.firstChild);
-    cell8.removeChild(cell8.firstChild);
-    cell9.removeChild(cell9.firstChild);
+    if(cell1.firstChild) {
+        cell1.removeChild(cell1.firstChild);
+    }
+    if(cell2.firstChild) {
+        cell2.removeChild(cell2.firstChild);
+    }
+    if(cell3.firstChild) {
+        cell3.removeChild(cell3.firstChild);
+    }
+    if(cell4.firstChild) {
+        cell4.removeChild(cell4.firstChild);
+    }
+    if(cell5.firstChild) {
+        cell5.removeChild(cell5.firstChild);
+    }
+    if(cell6.firstChild) {
+        cell6.removeChild(cell6.firstChild);
+    }
+    if(cell7.firstChild) {
+        cell7.removeChild(cell7.firstChild);
+    }
+    if(cell8.firstChild) {
+        cell8.removeChild(cell8.firstChild);
+    }
+    if(cell9.firstChild) {
+        cell9.removeChild(cell9.firstChild);
+    }
+    
     if(X_wins) {
-        //Say X wins!
+        let div = document.createElement("div");
+        div.style.width = "100px";
+        div.style.height = "100px";
+        div.style.color = "rgb(255,255,255)";
+        div.style.position = "absolute";
+        div.style.left = "50%";
+        div.style.top = "50%";
+        div.style.marginLeft = "-50px";
+        div.style.marginTop = "-50px";
+
+        let h1 = document.createElement("h1");
+        let text = document.createTextNode("X Wins!");
+        h1.appendChild(text);
+        div.appendChild(h1);
+
+        document.body.appendChild(div);
     }
     else {
         //Say O wins!
