@@ -812,6 +812,21 @@ function gameFinished(X_wins) {
         document.body.appendChild(div);
     }
     else {
-        //Say O wins!
+        let div = document.createElement("div");
+        div.style.width = "100px";
+        div.style.height = "100px";
+        div.style.color = "rgb(255,255,255)";
+        div.style.position = "absolute";
+        div.style.left = "50%";
+        div.style.top = "50%";
+        div.style.marginLeft = "-50px";
+        div.style.marginTop = "-50px";
+
+        let h1 = document.createElement("h1");
+        let text = document.createTextNode("O Wins!");
+        h1.appendChild(text);
+        div.appendChild(h1);
+
+        document.body.appendChild(div);
     }
 }
