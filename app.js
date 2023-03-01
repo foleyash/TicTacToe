@@ -101,6 +101,9 @@ cell1.addEventListener('click', () => {
     else if(evaluateOWin()) {
         gameOver = true;
     }
+    else if(evaluateTie()) {
+        gameOver = true;
+    }
 });
 
 cell2.addEventListener('click', () => {
@@ -131,6 +134,9 @@ cell2.addEventListener('click', () => {
         gameOver = true;
     }
     else if(evaluateOWin()) {
+        gameOver = true;
+    }
+    else if(evaluateTie()) {
         gameOver = true;
     }
 });
@@ -165,6 +171,9 @@ cell3.addEventListener('click', () => {
     else if(evaluateOWin()) {
         gameOver = true;
     }
+    else if(evaluateTie()) {
+        gameOver = true;
+    }
 });
 
 cell4.addEventListener('click', () => {
@@ -195,6 +204,9 @@ cell4.addEventListener('click', () => {
         gameOver = true;
     }
     else if(evaluateOWin()) {
+        gameOver = true;
+    }
+    else if(evaluateTie()) {
         gameOver = true;
     }
 });
@@ -229,6 +241,9 @@ cell5.addEventListener('click', () => {
     else if(evaluateOWin()) {
         gameOver = true;
     }
+    else if(evaluateTie()) {
+        gameOver = true;
+    }
 });
 
 cell6.addEventListener('click', () => {
@@ -259,6 +274,9 @@ cell6.addEventListener('click', () => {
         gameOver = true;
     }
     else if(evaluateOWin()) {
+        gameOver = true;
+    }
+    else if(evaluateTie()) {
         gameOver = true;
     }
 });
@@ -293,6 +311,9 @@ cell7.addEventListener('click', () => {
     else if(evaluateOWin()) {
         gameOver = true;
     }
+    else if(evaluateTie()) {
+        gameOver = true;
+    }
 });
 
 cell8.addEventListener('click', () => {
@@ -325,6 +346,9 @@ cell8.addEventListener('click', () => {
     else if(evaluateOWin()) {
         gameOver = true;
     }
+    else if(evaluateTie()) {
+        gameOver = true;
+    }
 });
 
 cell9.addEventListener('click', () => {
@@ -355,6 +379,9 @@ cell9.addEventListener('click', () => {
         gameOver = true;
     }
     else if(evaluateOWin()) {
+        gameOver = true;
+    }
+    else if(evaluateTie()) {
         gameOver = true;
     }
 });
@@ -668,6 +695,54 @@ function evaluateTie() {
         }
     }
 
+    if(full == true) {
+        if(cell1.firstChild) {
+            cell1.removeChild(cell1.firstChild);
+        }
+        if(cell2.firstChild) {
+            cell2.removeChild(cell2.firstChild);
+        }
+        if(cell3.firstChild) {
+            cell3.removeChild(cell3.firstChild);
+        }
+        if(cell4.firstChild) {
+            cell4.removeChild(cell4.firstChild);
+        }
+        if(cell5.firstChild) {
+            cell5.removeChild(cell5.firstChild);
+        }
+        if(cell6.firstChild) {
+            cell6.removeChild(cell6.firstChild);
+        }
+        if(cell7.firstChild) {
+            cell7.removeChild(cell7.firstChild);
+        }
+        if(cell8.firstChild) {
+            cell8.removeChild(cell8.firstChild);
+        }
+        if(cell9.firstChild) {
+            cell9.removeChild(cell9.firstChild);
+        }
+
+        let div = document.createElement("div");
+        div.style.width = "100px";
+        div.style.height = "100px";
+        div.style.color = "red";
+        div.style.position = "absolute";
+        div.style.left = "50%";
+        div.style.top = "50%";
+        div.style.marginLeft = "-50px";
+        div.style.marginTop = "-50px";
+
+        let h1 = document.createElement("h1");
+        h1.style.textAlign = "center";
+        let text = document.createTextNode("Tie!");
+        h1.appendChild(text);
+        div.appendChild(h1);
+
+        document.body.appendChild(div);
+    }
+
     return full;
 }
 
@@ -764,7 +839,7 @@ function alternateLights(losingSpaces) {
     }, 500);
 }
 
-function gameFinished(X_wins) {
+function gameFinished(X_wins, tie) {
     if(cell1.firstChild) {
         cell1.removeChild(cell1.firstChild);
     }
@@ -829,4 +904,13 @@ function gameFinished(X_wins) {
 
         document.body.appendChild(div);
     }
+}
+
+function robotMove(moves) {
+    //use this as a driver that accessed the miniMax algorithm to make an informed decision for
+    //the robot
+}
+
+function miniMax(moves, depth, isMax) {
+    //write the recursive minimax algorithm here
 }
