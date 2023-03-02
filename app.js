@@ -104,6 +104,56 @@ cell1.addEventListener('click', () => {
     else if(evaluateTie()) {
         gameOver = true;
     }
+    else {
+        let moveIdx = robotMove(moves);
+        console.log(moveIdx);
+        var img2 = document.createElement("img");
+        img2.style.maxWidth = '100%';
+        img2.style.maxHeight = '100%';
+        img2.src = 'img/O.jpg';
+        img2.alt = 'O';
+        moves[moveIdx] = 'O';
+        printMoves(moves);
+
+        if(moveIdx == 0) {
+            cell1.appendChild(img2);
+            cell1_clicked = true;
+        }
+        else if(moveIdx == 1) {
+            cell2.appendChild(img2);
+            cell2_clicked = true;
+        }
+        else if(moveIdx == 2) {
+            cell3.appendChild(img2);
+            cell3_clicked = true;
+        }
+        else if(moveIdx == 3) {
+            cell4.appendChild(img2);
+            cell4_clicked = true;
+        }
+        else if(moveIdx == 4) {
+            cell5.appendChild(img2);
+            cell5_clicked = true;
+        }
+        else if(moveIdx == 5) {
+            cell6.appendChild(img2);
+            cell6_clicked = true;
+        }
+        else if(moveIdx == 6) {
+            cell7.appendChild(img2);
+            cell7_clicked = true;
+        }
+        else if(moveIdx == 7) {
+            cell8.appendChild(img2);
+            cell8_clicked = true;
+        }
+        else if(moveIdx == 8) {
+            cell9.appendChild(img2);
+            cell9_clicked = true;
+        }
+
+        X_turn = true;
+    }
 });
 
 cell2.addEventListener('click', () => {
@@ -138,6 +188,56 @@ cell2.addEventListener('click', () => {
     }
     else if(evaluateTie()) {
         gameOver = true;
+    }
+    else {
+        let moveIdx = robotMove(moves);
+        console.log(moveIdx);
+        var img2 = document.createElement("img");
+        img2.style.maxWidth = '100%';
+        img2.style.maxHeight = '100%';
+        img2.src = 'img/O.jpg';
+        img2.alt = 'O';
+        moves[moveIdx] = 'O';
+        printMoves(moves);
+
+        if(moveIdx == 0) {
+            cell1.appendChild(img2);
+            cell1_clicked = true;
+        }
+        else if(moveIdx == 1) {
+            cell2.appendChild(img2);
+            cell2_clicked = true;
+        }
+        else if(moveIdx == 2) {
+            cell3.appendChild(img2);
+            cell3_clicked = true;
+        }
+        else if(moveIdx == 3) {
+            cell4.appendChild(img2);
+            cell4_clicked = true;
+        }
+        else if(moveIdx == 4) {
+            cell5.appendChild(img2);
+            cell5_clicked = true;
+        }
+        else if(moveIdx == 5) {
+            cell6.appendChild(img2);
+            cell6_clicked = true;
+        }
+        else if(moveIdx == 6) {
+            cell7.appendChild(img2);
+            cell7_clicked = true;
+        }
+        else if(moveIdx == 7) {
+            cell8.appendChild(img2);
+            cell8_clicked = true;
+        }
+        else if(moveIdx == 8) {
+            cell9.appendChild(img2);
+            cell9_clicked = true;
+        }
+
+        X_turn = true;
     }
 });
 
@@ -174,6 +274,56 @@ cell3.addEventListener('click', () => {
     else if(evaluateTie()) {
         gameOver = true;
     }
+    else {
+        let moveIdx = robotMove(moves);
+        console.log(moveIdx);
+        var img2 = document.createElement("img");
+        img2.style.maxWidth = '100%';
+        img2.style.maxHeight = '100%';
+        img2.src = 'img/O.jpg';
+        img2.alt = 'O';
+        moves[moveIdx] = 'O';
+        printMoves(moves);
+
+        if(moveIdx == 0) {
+            cell1.appendChild(img2);
+            cell1_clicked = true;
+        }
+        else if(moveIdx == 1) {
+            cell2.appendChild(img2);
+            cell2_clicked = true;
+        }
+        else if(moveIdx == 2) {
+            cell3.appendChild(img2);
+            cell3_clicked = true;
+        }
+        else if(moveIdx == 3) {
+            cell4.appendChild(img2);
+            cell4_clicked = true;
+        }
+        else if(moveIdx == 4) {
+            cell5.appendChild(img2);
+            cell5_clicked = true;
+        }
+        else if(moveIdx == 5) {
+            cell6.appendChild(img2);
+            cell6_clicked = true;
+        }
+        else if(moveIdx == 6) {
+            cell7.appendChild(img2);
+            cell7_clicked = true;
+        }
+        else if(moveIdx == 7) {
+            cell8.appendChild(img2);
+            cell8_clicked = true;
+        }
+        else if(moveIdx == 8) {
+            cell9.appendChild(img2);
+            cell9_clicked = true;
+        }
+
+        X_turn = true;
+    }
 });
 
 cell4.addEventListener('click', () => {
@@ -208,6 +358,56 @@ cell4.addEventListener('click', () => {
     }
     else if(evaluateTie()) {
         gameOver = true;
+    }
+    else {
+        let moveIdx = robotMove(moves);
+        console.log(moveIdx);
+        var img2 = document.createElement("img");
+        img2.style.maxWidth = '100%';
+        img2.style.maxHeight = '100%';
+        img2.src = 'img/O.jpg';
+        img2.alt = 'O';
+        moves[moveIdx] = 'O';
+        printMoves(moves);
+
+        if(moveIdx == 0) {
+            cell1.appendChild(img2);
+            cell1_clicked = true;
+        }
+        else if(moveIdx == 1) {
+            cell2.appendChild(img2);
+            cell2_clicked = true;
+        }
+        else if(moveIdx == 2) {
+            cell3.appendChild(img2);
+            cell3_clicked = true;
+        }
+        else if(moveIdx == 3) {
+            cell4.appendChild(img2);
+            cell4_clicked = true;
+        }
+        else if(moveIdx == 4) {
+            cell5.appendChild(img2);
+            cell5_clicked = true;
+        }
+        else if(moveIdx == 5) {
+            cell6.appendChild(img2);
+            cell6_clicked = true;
+        }
+        else if(moveIdx == 6) {
+            cell7.appendChild(img2);
+            cell7_clicked = true;
+        }
+        else if(moveIdx == 7) {
+            cell8.appendChild(img2);
+            cell8_clicked = true;
+        }
+        else if(moveIdx == 8) {
+            cell9.appendChild(img2);
+            cell9_clicked = true;
+        }
+
+        X_turn = true;
     }
 });
 
@@ -244,6 +444,56 @@ cell5.addEventListener('click', () => {
     else if(evaluateTie()) {
         gameOver = true;
     }
+    else {
+        let moveIdx = robotMove(moves);
+        console.log(moveIdx);
+        var img2 = document.createElement("img");
+        img2.style.maxWidth = '100%';
+        img2.style.maxHeight = '100%';
+        img2.src = 'img/O.jpg';
+        img2.alt = 'O';
+        moves[moveIdx] = 'O';
+        printMoves(moves);
+
+        if(moveIdx == 0) {
+            cell1.appendChild(img2);
+            cell1_clicked = true;
+        }
+        else if(moveIdx == 1) {
+            cell2.appendChild(img2);
+            cell2_clicked = true;
+        }
+        else if(moveIdx == 2) {
+            cell3.appendChild(img2);
+            cell3_clicked = true;
+        }
+        else if(moveIdx == 3) {
+            cell4.appendChild(img2);
+            cell4_clicked = true;
+        }
+        else if(moveIdx == 4) {
+            cell5.appendChild(img2);
+            cell5_clicked = true;
+        }
+        else if(moveIdx == 5) {
+            cell6.appendChild(img2);
+            cell6_clicked = true;
+        }
+        else if(moveIdx == 6) {
+            cell7.appendChild(img2);
+            cell7_clicked = true;
+        }
+        else if(moveIdx == 7) {
+            cell8.appendChild(img2);
+            cell8_clicked = true;
+        }
+        else if(moveIdx == 8) {
+            cell9.appendChild(img2);
+            cell9_clicked = true;
+        }
+
+        X_turn = true;
+    }
 });
 
 cell6.addEventListener('click', () => {
@@ -278,6 +528,56 @@ cell6.addEventListener('click', () => {
     }
     else if(evaluateTie()) {
         gameOver = true;
+    }
+    else {
+        let moveIdx = robotMove(moves);
+        console.log(moveIdx);
+        var img2 = document.createElement("img");
+        img2.style.maxWidth = '100%';
+        img2.style.maxHeight = '100%';
+        img2.src = 'img/O.jpg';
+        img2.alt = 'O';
+        moves[moveIdx] = 'O';
+        printMoves(moves);
+
+        if(moveIdx == 0) {
+            cell1.appendChild(img2);
+            cell1_clicked = true;
+        }
+        else if(moveIdx == 1) {
+            cell2.appendChild(img2);
+            cell2_clicked = true;
+        }
+        else if(moveIdx == 2) {
+            cell3.appendChild(img2);
+            cell3_clicked = true;
+        }
+        else if(moveIdx == 3) {
+            cell4.appendChild(img2);
+            cell4_clicked = true;
+        }
+        else if(moveIdx == 4) {
+            cell5.appendChild(img2);
+            cell5_clicked = true;
+        }
+        else if(moveIdx == 5) {
+            cell6.appendChild(img2);
+            cell6_clicked = true;
+        }
+        else if(moveIdx == 6) {
+            cell7.appendChild(img2);
+            cell7_clicked = true;
+        }
+        else if(moveIdx == 7) {
+            cell8.appendChild(img2);
+            cell8_clicked = true;
+        }
+        else if(moveIdx == 8) {
+            cell9.appendChild(img2);
+            cell9_clicked = true;
+        }
+
+        X_turn = true;
     }
 });
 
@@ -314,6 +614,56 @@ cell7.addEventListener('click', () => {
     else if(evaluateTie()) {
         gameOver = true;
     }
+    else {
+        let moveIdx = robotMove(moves);
+        console.log(moveIdx);
+        var img2 = document.createElement("img");
+        img2.style.maxWidth = '100%';
+        img2.style.maxHeight = '100%';
+        img2.src = 'img/O.jpg';
+        img2.alt = 'O';
+        moves[moveIdx] = 'O';
+        printMoves(moves);
+
+        if(moveIdx == 0) {
+            cell1.appendChild(img2);
+            cell1_clicked = true;
+        }
+        else if(moveIdx == 1) {
+            cell2.appendChild(img2);
+            cell2_clicked = true;
+        }
+        else if(moveIdx == 2) {
+            cell3.appendChild(img2);
+            cell3_clicked = true;
+        }
+        else if(moveIdx == 3) {
+            cell4.appendChild(img2);
+            cell4_clicked = true;
+        }
+        else if(moveIdx == 4) {
+            cell5.appendChild(img2);
+            cell5_clicked = true;
+        }
+        else if(moveIdx == 5) {
+            cell6.appendChild(img2);
+            cell6_clicked = true;
+        }
+        else if(moveIdx == 6) {
+            cell7.appendChild(img2);
+            cell7_clicked = true;
+        }
+        else if(moveIdx == 7) {
+            cell8.appendChild(img2);
+            cell8_clicked = true;
+        }
+        else if(moveIdx == 8) {
+            cell9.appendChild(img2);
+            cell9_clicked = true;
+        }
+
+        X_turn = true;
+    }
 });
 
 cell8.addEventListener('click', () => {
@@ -349,6 +699,56 @@ cell8.addEventListener('click', () => {
     else if(evaluateTie()) {
         gameOver = true;
     }
+    else {
+        let moveIdx = robotMove(moves);
+        console.log(moveIdx);
+        var img2 = document.createElement("img");
+        img2.style.maxWidth = '100%';
+        img2.style.maxHeight = '100%';
+        img2.src = 'img/O.jpg';
+        img2.alt = 'O';
+        moves[moveIdx] = 'O';
+        printMoves(moves);
+
+        if(moveIdx == 0) {
+            cell1.appendChild(img2);
+            cell1_clicked = true;
+        }
+        else if(moveIdx == 1) {
+            cell2.appendChild(img2);
+            cell2_clicked = true;
+        }
+        else if(moveIdx == 2) {
+            cell3.appendChild(img2);
+            cell3_clicked = true;
+        }
+        else if(moveIdx == 3) {
+            cell4.appendChild(img2);
+            cell4_clicked = true;
+        }
+        else if(moveIdx == 4) {
+            cell5.appendChild(img2);
+            cell5_clicked = true;
+        }
+        else if(moveIdx == 5) {
+            cell6.appendChild(img2);
+            cell6_clicked = true;
+        }
+        else if(moveIdx == 6) {
+            cell7.appendChild(img2);
+            cell7_clicked = true;
+        }
+        else if(moveIdx == 7) {
+            cell8.appendChild(img2);
+            cell8_clicked = true;
+        }
+        else if(moveIdx == 8) {
+            cell9.appendChild(img2);
+            cell9_clicked = true;
+        }
+
+        X_turn = true;
+    }
 });
 
 cell9.addEventListener('click', () => {
@@ -383,6 +783,56 @@ cell9.addEventListener('click', () => {
     }
     else if(evaluateTie()) {
         gameOver = true;
+    }
+    else {
+        let moveIdx = robotMove(moves);
+        console.log(moveIdx);
+        var img2 = document.createElement("img");
+        img2.style.maxWidth = '100%';
+        img2.style.maxHeight = '100%';
+        img2.src = 'img/O.jpg';
+        img2.alt = 'O';
+        moves[moveIdx] = 'O';
+        printMoves(moves);
+
+        if(moveIdx == 0) {
+            cell1.appendChild(img2);
+            cell1_clicked = true;
+        }
+        else if(moveIdx == 1) {
+            cell2.appendChild(img2);
+            cell2_clicked = true;
+        }
+        else if(moveIdx == 2) {
+            cell3.appendChild(img2);
+            cell3_clicked = true;
+        }
+        else if(moveIdx == 3) {
+            cell4.appendChild(img2);
+            cell4_clicked = true;
+        }
+        else if(moveIdx == 4) {
+            cell5.appendChild(img2);
+            cell5_clicked = true;
+        }
+        else if(moveIdx == 5) {
+            cell6.appendChild(img2);
+            cell6_clicked = true;
+        }
+        else if(moveIdx == 6) {
+            cell7.appendChild(img2);
+            cell7_clicked = true;
+        }
+        else if(moveIdx == 7) {
+            cell8.appendChild(img2);
+            cell8_clicked = true;
+        }
+        else if(moveIdx == 8) {
+            cell9.appendChild(img2);
+            cell9_clicked = true;
+        }
+
+        X_turn = true;
     }
 });
 
@@ -839,7 +1289,7 @@ function alternateLights(losingSpaces) {
     }, 500);
 }
 
-function gameFinished(X_wins, tie) {
+function gameFinished(X_wins) {
     if(cell1.firstChild) {
         cell1.removeChild(cell1.firstChild);
     }
@@ -906,11 +1356,124 @@ function gameFinished(X_wins, tie) {
     }
 }
 
+function isMovesLeft(moves) {
+    for(let i = 0; i < 9; i++) {
+        if(moves[i] == '-') {
+            return true
+        }
+    }
+
+    return false;
+}
+
+function evaluate() {
+    if(moves[0] == 'X' && moves[1] == 'X' && moves[2] == 'X' ||
+    moves[0] == 'X' && moves[3] == 'X' && moves[6] == 'X' || 
+    moves[1] == 'X' && moves[4] == 'X' && moves[7] == 'X' || 
+    moves[2] == 'X' && moves[5] == 'X' && moves[8] == 'X' || 
+    moves[3] == 'X' && moves[4] == 'X' && moves[5] == 'X' || 
+    moves[6] == 'X' && moves[7] == 'X' && moves[8] == 'X' || 
+    moves[6] == 'X' && moves[4] == 'X' && moves[2] == 'X' || 
+    moves[0] == 'X' && moves[4] == 'X' && moves[8] == 'X' ){
+
+        return -10;
+    }
+    else if(moves[0] == 'O' && moves[1] == 'O' && moves[2] == 'O' ||
+    moves[0] == 'O' && moves[3] == 'O' && moves[6] == 'O' || 
+    moves[1] == 'O' && moves[4] == 'O' && moves[7] == 'O' || 
+    moves[2] == 'O' && moves[5] == 'O' && moves[8] == 'O' || 
+    moves[3] == 'O' && moves[4] == 'O' && moves[5] == 'O' || 
+    moves[6] == 'O' && moves[7] == 'O' && moves[8] == 'O' || 
+    moves[6] == 'O' && moves[4] == 'O' && moves[2] == 'O' || 
+    moves[0] == 'O' && moves[4] == 'O' && moves[8] == 'O' ){
+
+        return 10;
+    }
+    else {
+        return 0;
+    }
+}
+
 function robotMove(moves) {
     //use this as a driver that accessed the miniMax algorithm to make an informed decision for
     //the robot
+
+    let bestMove;
+    let bestVal = -1000;
+
+    //loop through each possible move in the board
+    for(let i = 0; i < 9; i++) {
+        
+        if(moves[i] == '-') {
+
+            moves[i] = 'O';
+
+            let moveVal = miniMax(moves, 0, false);
+
+            moves[i] = '-';
+
+            if(moveVal > bestVal) {
+                bestMove = i;
+                bestVal = moveVal;
+            }
+        }
+    }
+
+    return bestMove;
 }
 
 function miniMax(moves, depth, isMax) {
     //write the recursive minimax algorithm here
+
+    let score = evaluate();
+
+    if(score == 10) {
+        return score;
+    }
+
+    if(score == -10) {
+        return score;
+    }
+
+    if(!isMovesLeft(moves)) {
+        return 0;
+    }
+
+    if(isMax) {
+        let best = -1000;
+
+        for(let i = 0; i < 9; i++) {
+            if(moves[i] == '-') {
+                moves[i] = 'O';
+
+                best = Math.max(best, miniMax(moves, depth+1, !isMax));
+
+                moves[i] = '-';
+            }
+        }
+
+        return best;
+    }
+    else {
+        let best = 1000;
+
+        for(let i = 0; i < 9; i++) {
+            if(moves[i] == '-') {
+                moves[i] = 'X';
+
+                best = Math.min(best, miniMax(moves, depth+1, !isMax));
+
+                moves[i] = '-';
+            }
+
+        }
+
+        return best;
+    }
+}
+
+function printMoves(moves) {
+    for (let i = 0; i < 9; i++) {
+        console.log(moves[i] + " ");
+    }
 }
