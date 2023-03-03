@@ -153,6 +153,15 @@ cell1.addEventListener('click', () => {
         }
 
         X_turn = true;
+        if(evaluateXWin()) {
+            gameOver = true;
+        }
+        else if(evaluateOWin()) {
+            gameOver = true;
+        }
+        else if(evaluateTie()) {
+            gameOver = true;
+        }
     }
 });
 
@@ -238,6 +247,15 @@ cell2.addEventListener('click', () => {
         }
 
         X_turn = true;
+        if(evaluateXWin()) {
+            gameOver = true;
+        }
+        else if(evaluateOWin()) {
+            gameOver = true;
+        }
+        else if(evaluateTie()) {
+            gameOver = true;
+        }
     }
 });
 
@@ -323,6 +341,15 @@ cell3.addEventListener('click', () => {
         }
 
         X_turn = true;
+        if(evaluateXWin()) {
+            gameOver = true;
+        }
+        else if(evaluateOWin()) {
+            gameOver = true;
+        }
+        else if(evaluateTie()) {
+            gameOver = true;
+        }
     }
 });
 
@@ -408,6 +435,15 @@ cell4.addEventListener('click', () => {
         }
 
         X_turn = true;
+        if(evaluateXWin()) {
+            gameOver = true;
+        }
+        else if(evaluateOWin()) {
+            gameOver = true;
+        }
+        else if(evaluateTie()) {
+            gameOver = true;
+        }
     }
 });
 
@@ -493,6 +529,15 @@ cell5.addEventListener('click', () => {
         }
 
         X_turn = true;
+        if(evaluateXWin()) {
+            gameOver = true;
+        }
+        else if(evaluateOWin()) {
+            gameOver = true;
+        }
+        else if(evaluateTie()) {
+            gameOver = true;
+        }
     }
 });
 
@@ -578,6 +623,15 @@ cell6.addEventListener('click', () => {
         }
 
         X_turn = true;
+        if(evaluateXWin()) {
+            gameOver = true;
+        }
+        else if(evaluateOWin()) {
+            gameOver = true;
+        }
+        else if(evaluateTie()) {
+            gameOver = true;
+        }
     }
 });
 
@@ -663,6 +717,15 @@ cell7.addEventListener('click', () => {
         }
 
         X_turn = true;
+        if(evaluateXWin()) {
+            gameOver = true;
+        }
+        else if(evaluateOWin()) {
+            gameOver = true;
+        }
+        else if(evaluateTie()) {
+            gameOver = true;
+        }
     }
 });
 
@@ -748,6 +811,15 @@ cell8.addEventListener('click', () => {
         }
 
         X_turn = true;
+        if(evaluateXWin()) {
+            gameOver = true;
+        }
+        else if(evaluateOWin()) {
+            gameOver = true;
+        }
+        else if(evaluateTie()) {
+            gameOver = true;
+        }
     }
 });
 
@@ -833,6 +905,15 @@ cell9.addEventListener('click', () => {
         }
 
         X_turn = true;
+        if(evaluateXWin()) {
+            gameOver = true;
+        }
+        else if(evaluateOWin()) {
+            gameOver = true;
+        }
+        else if(evaluateTie()) {
+            gameOver = true;
+        }
     }
 });
 
