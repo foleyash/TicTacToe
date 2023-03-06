@@ -106,14 +106,12 @@ cell1.addEventListener('click', () => {
     }
     else {
         let moveIdx = robotMove(moves);
-        console.log(moveIdx);
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
         img2.src = 'img/O.jpg';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
-        printMoves(moves);
 
         if(moveIdx == 0) {
             cell1.appendChild(img2);
@@ -162,6 +160,10 @@ cell1.addEventListener('click', () => {
         else if(evaluateTie()) {
             gameOver = true;
         }
+
+        if(gameOver) {
+
+        }
     }
 });
 
@@ -200,14 +202,12 @@ cell2.addEventListener('click', () => {
     }
     else {
         let moveIdx = robotMove(moves);
-        console.log(moveIdx);
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
         img2.src = 'img/O.jpg';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
-        printMoves(moves);
 
         if(moveIdx == 0) {
             cell1.appendChild(img2);
@@ -294,14 +294,12 @@ cell3.addEventListener('click', () => {
     }
     else {
         let moveIdx = robotMove(moves);
-        console.log(moveIdx);
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
         img2.src = 'img/O.jpg';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
-        printMoves(moves);
 
         if(moveIdx == 0) {
             cell1.appendChild(img2);
@@ -388,14 +386,12 @@ cell4.addEventListener('click', () => {
     }
     else {
         let moveIdx = robotMove(moves);
-        console.log(moveIdx);
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
         img2.src = 'img/O.jpg';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
-        printMoves(moves);
 
         if(moveIdx == 0) {
             cell1.appendChild(img2);
@@ -482,14 +478,12 @@ cell5.addEventListener('click', () => {
     }
     else {
         let moveIdx = robotMove(moves);
-        console.log(moveIdx);
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
         img2.src = 'img/O.jpg';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
-        printMoves(moves);
 
         if(moveIdx == 0) {
             cell1.appendChild(img2);
@@ -576,14 +570,12 @@ cell6.addEventListener('click', () => {
     }
     else {
         let moveIdx = robotMove(moves);
-        console.log(moveIdx);
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
         img2.src = 'img/O.jpg';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
-        printMoves(moves);
 
         if(moveIdx == 0) {
             cell1.appendChild(img2);
@@ -670,14 +662,12 @@ cell7.addEventListener('click', () => {
     }
     else {
         let moveIdx = robotMove(moves);
-        console.log(moveIdx);
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
         img2.src = 'img/O.jpg';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
-        printMoves(moves);
 
         if(moveIdx == 0) {
             cell1.appendChild(img2);
@@ -764,14 +754,12 @@ cell8.addEventListener('click', () => {
     }
     else {
         let moveIdx = robotMove(moves);
-        console.log(moveIdx);
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
         img2.src = 'img/O.jpg';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
-        printMoves(moves);
 
         if(moveIdx == 0) {
             cell1.appendChild(img2);
@@ -858,14 +846,12 @@ cell9.addEventListener('click', () => {
     }
     else {
         let moveIdx = robotMove(moves);
-        console.log(moveIdx);
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
         img2.src = 'img/O.jpg';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
-        printMoves(moves);
 
         if(moveIdx == 0) {
             cell1.appendChild(img2);
@@ -913,7 +899,13 @@ cell9.addEventListener('click', () => {
         }
         else if(evaluateTie()) {
             gameOver = true;
+
         }
+
+    }
+
+    if(gameOver == true) {
+        playAgain();
     }
 });
 
@@ -1435,6 +1427,29 @@ function gameFinished(X_wins) {
 
         document.body.appendChild(div);
     }
+}
+
+function playAgain() {
+    let div = document.createElement("div");
+    div.style.height = '200px';
+    div.style.width = '300px';
+    div.style.position = 'absolute';
+    div.style.transition = 'all 2s'
+    div.style.bottom = '10%';
+    div.style.left = '50%';
+    div.style.marginLeft = '-150px';
+    let cloud = document.createElement("img");
+    cloud.style.maxWidth = '100%';
+    cloud.style.maxHeight = '100%';
+    cloud.src = 'img/cloud.png';
+    cloud.style.opacity = '0';
+    cloud.style.opacity = '1';
+
+    div.appendChild(cloud);
+
+    document.body.appendChild(div);
+    
+
 }
 
 function isMovesLeft(moves) {
