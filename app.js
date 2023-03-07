@@ -160,10 +160,10 @@ cell1.addEventListener('click', () => {
         else if(evaluateTie()) {
             gameOver = true;
         }
+    }
 
-        if(gameOver) {
-
-        }
+    if(gameOver == true) {
+        playAgain();
     }
 });
 
@@ -257,6 +257,10 @@ cell2.addEventListener('click', () => {
             gameOver = true;
         }
     }
+
+    if(gameOver == true) {
+        playAgain();
+    }
 });
 
 cell3.addEventListener('click', () => {
@@ -348,6 +352,10 @@ cell3.addEventListener('click', () => {
         else if(evaluateTie()) {
             gameOver = true;
         }
+    }
+
+    if(gameOver == true) {
+        playAgain();
     }
 });
 
@@ -441,6 +449,10 @@ cell4.addEventListener('click', () => {
             gameOver = true;
         }
     }
+
+    if(gameOver == true) {
+        playAgain();
+    }
 });
 
 cell5.addEventListener('click', () => {
@@ -532,6 +544,10 @@ cell5.addEventListener('click', () => {
         else if(evaluateTie()) {
             gameOver = true;
         }
+    }
+
+    if(gameOver == true) {
+        playAgain();
     }
 });
 
@@ -625,6 +641,10 @@ cell6.addEventListener('click', () => {
             gameOver = true;
         }
     }
+
+    if(gameOver == true) {
+        playAgain();
+    }
 });
 
 cell7.addEventListener('click', () => {
@@ -717,6 +737,10 @@ cell7.addEventListener('click', () => {
             gameOver = true;
         }
     }
+
+    if(gameOver == true) {
+        playAgain();
+    }
 });
 
 cell8.addEventListener('click', () => {
@@ -808,6 +832,10 @@ cell8.addEventListener('click', () => {
         else if(evaluateTie()) {
             gameOver = true;
         }
+    }
+
+    if(gameOver == true) {
+        playAgain();
     }
 });
 
@@ -1434,35 +1462,77 @@ function playAgain() {
     div.style.height = '200px';
     div.style.width = '300px';
     div.style.position = 'absolute';
-    div.style.transition = 'all 2s'
     div.style.bottom = '10%';
     div.style.left = '50%';
     div.style.marginLeft = '-150px';
     let cloud = document.createElement("img");
+    cloud.style.position = 'absolute';
     cloud.style.maxWidth = '100%';
     cloud.style.maxHeight = '100%';
     cloud.src = 'img/cloud.png';
     cloud.style.opacity = '0';
     cloud.style.opacity = '1';
     cloud.style.transition = '.35s';
-    cloud.style.cursor = 'pointer';
+    cloud.style.zIndex = '1';
+    let h1 = document.createElement("h1");
+    h1.style.width = '50%';
+    h1.style.height = '50%';
+    h1.style.position = 'absolute';
+    h1.style.top = '38%';
+    h1.style.left = '25%';
+    h1.style.color = 'black';
+    h1.style.zIndex = '2';
+    h1.style.transition = '.35s';
+    h1.style.cursor = 'pointer';
+    let text = document.createTextNode("Play Again?");
+    h1.appendChild(text);
 
     let minCloud = false;
+    let playAgainHover = false;
+    let playAgain = false;
+
+    h1.onmouseover = function() {
+        playAgainHover = true;
+        h1.style.color = 'blue';
+    }
+
+    h1.onmouseout = function() {
+        playAgainHover = false;
+        h1.style.color = 'black';
+    }
+
+    window.setTimeout(() => {
+        div.appendChild(cloud);
+        div.appendChild(h1);
+
+        document.body.appendChild(div);
+    }, 500);
+
     var oscilate = window.setInterval(function() {
+
+        if(playAgainHover == true) {
+            cloud.style.scale = '1';
+            h1.style.fontSize = '2em';
+            if(minCloud) {
+                h1.style.transform = 'translate(-3%, -3%)';
+            }
+
+            minCloud = false;
+            return;
+        }
         if(minCloud) {
             cloud.style.scale = '1';
-            minCloud = false;;
+            h1.style.fontSize = '2em';
+            h1.style.transform = 'translate(-3%, -3%)';
+            minCloud = false;
         }
         else {
             cloud.style.scale = '.85';
+            h1.style.fontSize = '1.7em';
+            h1.style.transform = 'translate(3%, 3%)';
             minCloud = true;
         }
     }, 390);
-
-    div.appendChild(cloud);
-
-    document.body.appendChild(div);
-    
 
 }
 
