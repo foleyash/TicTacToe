@@ -1444,6 +1444,20 @@ function playAgain() {
     cloud.src = 'img/cloud.png';
     cloud.style.opacity = '0';
     cloud.style.opacity = '1';
+    cloud.style.transition = '.35s';
+    cloud.style.cursor = 'pointer';
+
+    let minCloud = false;
+    var oscilate = window.setInterval(function() {
+        if(minCloud) {
+            cloud.style.scale = '1';
+            minCloud = false;;
+        }
+        else {
+            cloud.style.scale = '.85';
+            minCloud = true;
+        }
+    }, 390);
 
     div.appendChild(cloud);
 
