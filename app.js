@@ -1275,23 +1275,17 @@ function evaluateTie() {
             cell9.removeChild(cell9.firstChild);
         }
 
-        let div = document.createElement("div");
-        div.style.width = "100px";
-        div.style.height = "100px";
-        div.style.color = "red";
-        div.style.position = "absolute";
-        div.style.left = "50%";
-        div.style.top = "50%";
-        div.style.marginLeft = "-50px";
-        div.style.marginTop = "-50px";
-
         let h1 = document.createElement("h1");
-        h1.style.textAlign = "center";
+        h1.style.height = '50%';
+        h1.style.width = '50%';
+        h1.style.position = 'absolute';
+        h1.style.top = '25%';
+        h1.style.left = '25%';
+        h1.style.textAlign = 'center';
         let text = document.createTextNode("Tie!");
         h1.appendChild(text);
-        div.appendChild(h1);
+        cell5.appendChild(h1);
 
-        document.body.appendChild(div);
     }
 
     return full;
@@ -1321,8 +1315,9 @@ function findLosingSpaces(winningSpaces) {
 
 function alternateLights(losingSpaces) {
     let color = 'blue';
-
+    
     interval = window.setInterval(function() {
+
         if(color == 'blue') {
             color = 'green';
             for(let i = 0; i < 6; i++) {
@@ -1420,38 +1415,33 @@ function gameFinished(X_wins) {
     }
     
     if(X_wins) {
-        let div = document.createElement("div");
-        div.style.width = "100px";
-        div.style.height = "100px";
-        div.style.color = "rgb(255,255,255)";
-        div.style.position = "absolute";
-        div.style.left = "50%";
-        div.style.top = "50%";
-        div.style.marginLeft = "-50px";
-        div.style.marginTop = "-50px";
-
+        
         let h1 = document.createElement("h1");
+        h1.style.height = '50%';
+        h1.style.width = '50%';
+        h1.style.position = 'absolute';
+        h1.style.top = '25%';
+        h1.style.left = '25%';
+        h1.style.textAlign = 'center';
+        h1.style.color = 'white';
         let text = document.createTextNode("X Wins!");
         h1.appendChild(text);
-        div.appendChild(h1);
+        cell5.appendChild(h1);
 
         document.body.appendChild(div);
     }
     else {
-        let div = document.createElement("div");
-        div.style.width = "100px";
-        div.style.height = "100px";
-        div.style.color = "rgb(255,255,255)";
-        div.style.position = "absolute";
-        div.style.left = "50%";
-        div.style.top = "50%";
-        div.style.marginLeft = "-50px";
-        div.style.marginTop = "-50px";
-
         let h1 = document.createElement("h1");
+        h1.style.height = '50%';
+        h1.style.width = '50%';
+        h1.style.position = 'absolute';
+        h1.style.top = '25%';
+        h1.style.left = '25%';
+        h1.style.textAlign = 'center';
+        h1.style.color = 'white'
         let text = document.createTextNode("O Wins!");
         h1.appendChild(text);
-        div.appendChild(h1);
+        cell5.appendChild(h1);
 
         document.body.appendChild(div);
     }
@@ -1510,6 +1500,10 @@ function playAgain() {
 
     var oscilate = window.setInterval(function() {
 
+        if(!gameOver) {
+            window.clearInterval(oscilate);
+            div.remove();
+        }
         if(playAgainHover == true) {
             cloud.style.scale = '1';
             h1.style.fontSize = '2em';
@@ -1533,6 +1527,37 @@ function playAgain() {
             minCloud = true;
         }
     }, 390);
+
+    h1.addEventListener('click', () => {
+        resetGame();
+    });
+
+}
+
+function resetGame() {
+    cell5.removeChild(cell5.firstChild);
+    gameOver = false;
+    cell1_clicked = false;
+    cell2_clicked = false;
+    cell3_clicked = false;
+    cell4_clicked = false;
+    cell5_clicked = false;
+    cell6_clicked = false;
+    cell7_clicked = false;
+    cell8_clicked = false;
+    cell9_clicked = false;
+
+    window.clearInterval(interval);
+
+    cell1.style.background = "white";
+    cell2.style.background = "white";
+    cell3.style.background = "white";
+    cell4.style.background = "white";
+    cell5.style.background = "white";
+    cell6.style.background = "white";
+    cell7.style.background = "white";
+    cell8.style.background = "white";
+    cell9.style.background = "white";
 
 }
 
