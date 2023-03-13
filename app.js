@@ -18,6 +18,8 @@ const cell9 = document.getElementById("cell9");
 var hover = false;
 var X_turn = true;
 var gameOver = false;
+var robotNumWins = 0;
+var playerNumWins = 0;
 
 var cell1_clicked = false;
 var cell2_clicked = false;
@@ -1105,6 +1107,9 @@ function evaluateOWin() {
             alternateLights(losingSpaces);
             gameFinished(false);
         }, 340);
+
+        robotNumWins++;
+        robotScore.getElementsByTagName('h1')[0].innerHTML = "Robot: " + robotNumWins;
       
         return true;
     }
@@ -1123,6 +1128,9 @@ function evaluateOWin() {
             alternateLights(losingSpaces);
             gameFinished(false);
         }, 340);
+
+        robotNumWins++;
+        robotScore.getElementsByTagName('h1')[0].innerHTML = "Robot: " + robotNumWins;
        
         return true;
     }
@@ -1141,6 +1149,9 @@ function evaluateOWin() {
             alternateLights(losingSpaces);
             gameFinished(false);
         }, 340);
+
+        robotNumWins++;
+        robotScore.getElementsByTagName('h1')[0].innerHTML = "Robot: " + robotNumWins;
        
         return true;
     }
@@ -1159,6 +1170,9 @@ function evaluateOWin() {
             alternateLights(losingSpaces);
             gameFinished(false);
         }, 340);
+
+        robotNumWins++;
+        robotScore.getElementsByTagName('h1')[0].innerHTML = "Robot: " + robotNumWins;
       
         return true;
     }
@@ -1177,6 +1191,9 @@ function evaluateOWin() {
             alternateLights(losingSpaces);
             gameFinished(false);
         }, 340);
+
+        robotNumWins++;
+        robotScore.getElementsByTagName('h1')[0].innerHTML = "Robot: " + robotNumWins;
        
         return true;
     }
@@ -1195,6 +1212,9 @@ function evaluateOWin() {
             alternateLights(losingSpaces);
             gameFinished(false);
         }, 340);
+
+        robotNumWins++;
+        robotScore.getElementsByTagName('h1')[0].innerHTML = "Robot: " + robotNumWins;
         
         return true;
     }
@@ -1213,6 +1233,9 @@ function evaluateOWin() {
             alternateLights(losingSpaces);
             gameFinished(false);
         }, 340);
+
+        robotNumWins++;
+        robotScore.getElementsByTagName('h1')[0].innerHTML = "Robot: " + robotNumWins;
         
         return true;
     }
@@ -1231,6 +1254,9 @@ function evaluateOWin() {
             alternateLights(losingSpaces);
             gameFinished(false);
         }, 340);
+
+        robotNumWins++;
+        robotScore.getElementsByTagName('h1')[0].innerHTML = "Robot: " + robotNumWins;
         
         return true;
     }
@@ -1442,8 +1468,6 @@ function gameFinished(X_wins) {
         let text = document.createTextNode("O Wins!");
         h1.appendChild(text);
         cell5.appendChild(h1);
-
-        document.body.appendChild(div);
     }
 }
 
@@ -1559,6 +1583,9 @@ function resetGame() {
     cell8.style.background = "white";
     cell9.style.background = "white";
 
+    for(let i = 0; i < 9; i++) {
+        moves[i] = '-';
+    }
 }
 
 function isMovesLeft(moves) {
