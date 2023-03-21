@@ -82,13 +82,13 @@ cell1.addEventListener('click', () => {
     img.style.maxHeight = '100%';
     img.style.opacity = 1;
     if(X_turn) {
-        img.src = 'img/X.jpg';
+        img.src = 'img/X.png';
         img.alt = 'X';
         X_turn = false;
         moves[0] = "X";
     }   
     else {
-        img.src = 'img/O.jpg';
+        img.src = 'img/O.png';
         img.alt = 'O';
         X_turn = true;
         moves[0] = "O";
@@ -111,7 +111,7 @@ cell1.addEventListener('click', () => {
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
-        img2.src = 'img/O.jpg';
+        img2.src = 'img/O.png';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
 
@@ -178,13 +178,13 @@ cell2.addEventListener('click', () => {
     img.style.maxHeight = '100%';
     img.style.opacity = 1;
     if(X_turn) {
-        img.src = 'img/X.jpg';
+        img.src = 'img/X.png';
         img.alt = 'X';
         X_turn = false;
         moves[1] = "X";
     }   
     else {
-        img.src = 'img/O.jpg';
+        img.src = 'img/O.png';
         img.alt = 'O';
         X_turn = true;
         moves[1] = "O";
@@ -207,7 +207,7 @@ cell2.addEventListener('click', () => {
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
-        img2.src = 'img/O.jpg';
+        img2.src = 'img/O.png';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
 
@@ -274,13 +274,13 @@ cell3.addEventListener('click', () => {
     img.style.maxHeight = '100%';
     img.style.opacity = 1;
     if(X_turn) {
-        img.src = 'img/X.jpg';
+        img.src = 'img/X.png';
         img.alt = 'X';
         X_turn = false;
         moves[2] = "X";
     }   
     else {
-        img.src = 'img/O.jpg';
+        img.src = 'img/O.png';
         img.alt = 'O';
         X_turn = true;
         moves[2] = "O";
@@ -303,7 +303,7 @@ cell3.addEventListener('click', () => {
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
-        img2.src = 'img/O.jpg';
+        img2.src = 'img/O.png';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
 
@@ -370,13 +370,13 @@ cell4.addEventListener('click', () => {
     img.style.maxHeight = '100%';
     img.style.opacity = 1;
     if(X_turn) {
-        img.src = 'img/X.jpg';
+        img.src = 'img/X.png';
         img.alt = 'X';
         X_turn = false;
         moves[3] = "X";
     }   
     else {
-        img.src = 'img/O.jpg';
+        img.src = 'img/O.png';
         img.alt = 'O';
         X_turn = true;
         moves[3] = "O";
@@ -399,7 +399,7 @@ cell4.addEventListener('click', () => {
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
-        img2.src = 'img/O.jpg';
+        img2.src = 'img/O.png';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
 
@@ -466,13 +466,13 @@ cell5.addEventListener('click', () => {
     img.style.maxHeight = '100%';
     img.style.opacity = 1;
     if(X_turn) {
-        img.src = 'img/X.jpg';
+        img.src = 'img/X.png';
         img.alt = 'X';
         X_turn = false;
         moves[4] = "X";
     }   
     else {
-        img.src = 'img/O.jpg';
+        img.src = 'img/O.png';
         img.alt = 'O';
         X_turn = true;
         moves[4] = "O";
@@ -495,7 +495,7 @@ cell5.addEventListener('click', () => {
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
-        img2.src = 'img/O.jpg';
+        img2.src = 'img/O.png';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
 
@@ -562,13 +562,13 @@ cell6.addEventListener('click', () => {
     img.style.maxHeight = '100%';
     img.style.opacity = 1;
     if(X_turn) {
-        img.src = 'img/X.jpg';
+        img.src = 'img/X.png';
         img.alt = 'X';
         X_turn = false;
         moves[5] = "X";
     }   
     else {
-        img.src = 'img/O.jpg';
+        img.src = 'img/O.png';
         img.alt = 'O';
         X_turn = true;
         moves[5] = "O";
@@ -591,7 +591,7 @@ cell6.addEventListener('click', () => {
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
-        img2.src = 'img/O.jpg';
+        img2.src = 'img/O.png';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
 
@@ -658,13 +658,13 @@ cell7.addEventListener('click', () => {
     img.style.maxHeight = '100%';
     img.style.opacity = 1;
     if(X_turn) {
-        img.src = 'img/X.jpg';
+        img.src = 'img/X.png';
         img.alt = 'X';
         X_turn = false;
         moves[6] = "X";
     }   
     else {
-        img.src = 'img/O.jpg';
+        img.src = 'img/O.png';
         img.alt = 'O';
         X_turn = true;
         moves[6] = "O";
@@ -687,7 +687,7 @@ cell7.addEventListener('click', () => {
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
-        img2.src = 'img/O.jpg';
+        img2.src = 'img/O.png';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
 
@@ -754,13 +754,13 @@ cell8.addEventListener('click', () => {
     img.style.maxHeight = '100%';
     img.style.opacity = 1;
     if(X_turn) {
-        img.src = 'img/X.jpg';
+        img.src = 'img/X.png';
         img.alt = 'X';
         X_turn = false;
         moves[7] = "X";
     }   
     else {
-        img.src = 'img/O.jpg';
+        img.src = 'img/O.png';
         img.alt = 'O';
         X_turn = true;
         moves[7] = "O";
@@ -783,7 +783,7 @@ cell8.addEventListener('click', () => {
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
-        img2.src = 'img/O.jpg';
+        img2.src = 'img/O.png';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
 
@@ -850,13 +850,13 @@ cell9.addEventListener('click', () => {
     img.style.maxHeight = '100%';
     img.style.opacity = 1;
     if(X_turn) {
-        img.src = 'img/X.jpg';
+        img.src = 'img/X.png';
         img.alt = 'X';
         X_turn = false;
         moves[8] = "X";
     }   
     else {
-        img.src = 'img/O.jpg';
+        img.src = 'img/O.png';
         img.alt = 'O';
         X_turn = true;
         moves[8] = "O";
@@ -879,7 +879,7 @@ cell9.addEventListener('click', () => {
         var img2 = document.createElement("img");
         img2.style.maxWidth = '100%';
         img2.style.maxHeight = '100%';
-        img2.src = 'img/O.jpg';
+        img2.src = 'img/O.png';
         img2.alt = 'O';
         moves[moveIdx] = 'O';
 
@@ -1561,6 +1561,7 @@ function playAgain() {
 function resetGame() {
     cell5.removeChild(cell5.firstChild);
     gameOver = false;
+    X_turn = true;
     cell1_clicked = false;
     cell2_clicked = false;
     cell3_clicked = false;
